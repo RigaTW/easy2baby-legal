@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Easy2Baby 隱私權政策與服務條款" />
+  <title>Easy2Baby · 隱私權政策 & 服務條款</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #7895A2;
+      --primary-light: #A8C4CE;
+      --primary-dark: #5C7885;
+      --bg: #F5F7F9;
+      --surface: #ffffff;
+      --text: #3A3A3A;
+      --text-secondary: #6B7C87;
+      --border: #E2E8EC;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+      color: white;
+      padding: 48px 24px 32px;
+      text-align: center;
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.15);
+      padding: 8px 20px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+    header p  { font-size: 13px; opacity: 0.8; }
+
+    /* ── Tab Switch ── */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 24px 16px 0;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .tab-btn {
+      padding: 10px 28px;
+      border: 2px solid var(--primary);
+      border-radius: 100px;
+      background: transparent;
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s;
+      font-family: inherit;
+    }
+    .tab-btn.active {
+      background: var(--primary);
+      color: white;
+    }
+    .tab-btn:hover:not(.active) {
+      background: var(--primary);
+      color: white;
+      opacity: 0.85;
+    }
+
+    /* ── Content ── */
+    main {
+      max-width: 760px;
+      margin: 24px auto 60px;
+      padding: 0 16px;
+    }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* ── Section Card ── */
+    .section-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 20px 22px;
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 16px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+    .section-body {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    ul.bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul.bullets li {
+      font-size: 14px;
+      color: var(--text-secondary);
+      padding: 4px 0;
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.7;
+    }
+    ul.bullets li::before {
+      content: '•';
+      color: var(--primary);
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+
+    /* ── Page header card ── */
+    .page-header {
+      background: linear-gradient(135deg,
+        rgba(120,149,162,0.1), rgba(168,196,206,0.1));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .page-header .icon {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+    .page-header h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+    .page-header .date {
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 12px;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--primary); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🍼 EASY2BABY</div>
+  <h1>法律文件中心</h1>
+  <p>Privacy Policy &amp; Terms of Service</p>
+</header>
+
+<div class="tabs">
+  <button class="tab-btn active" onclick="switchTab('privacy', this)">隱私權政策</button>
+  <button class="tab-btn" onclick="switchTab('terms', this)">服務條款</button>
+</div>
+
+<main>
+
+  <!-- ═══ 隱私權政策 ═══ -->
+  <div id="privacy" class="tab-content active">
+    <div class="page-header">
+      <div class="icon">🔒</div>
+      <h2>隱私權政策</h2>
+      <div class="date">最後更新日期：2026 年 3 月 15 日</div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">一、前言</div>
+      <div class="section-body">
+        Easy2Baby（以下簡稱「本應用程式」）重視您的個人隱私。本隱私權政策說明我們如何蒐集、使用、儲存及保護您的個人資料。使用本應用程式即表示您同意本政策所述之資料處理方式。
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">二、我們蒐集的資料</div>
+      <ul class="bullets">
+        <li>帳戶資訊：電子郵件地址、顯示名稱、Google 帳號資訊（透過 Google 登入時）</li>
+        <li>寶貝檔案：寶貝姓名、出生日期、性別、大頭貼照片</li>
+        <li>成長紀錄：身高、體重、頭圍測量資料</li>
+        <li>健康追蹤：疫苗接種記錄、發展里程碑、孕期產檢記錄、睡眠紀錄</li>
+        <li>照片與相簿：您上傳的寶貝照片及相簿資訊</li>
+        <li>裝置資訊：裝置型號、作業系統版本（用於錯誤排除）</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">三、資料使用方式</div>
+      <ul class="bullets">
+        <li>提供並維護應用程式核心功能</li>
+        <li>同步您的資料至不同裝置</li>
+        <li>讓您與家庭成員共享寶貝資訊</li>
+        <li>改善應用程式效能與使用體驗</li>
+        <li>發送重要的功能更新通知</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">四、資料儲存與安全</div>
+      <div class="section-body">
+        您的資料儲存於 Google Firebase 雲端平台，採用業界標準的加密技術（傳輸中使用 TLS/SSL，靜態資料加密）。我們採取合理的技術與組織措施保護您的個人資料免於未經授權的存取、修改或揭露。<br><br>
+        照片檔案儲存於 Firebase Cloud Storage，受 Google Cloud 安全基礎架構保護。
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">五、資料分享</div>
+      <ul class="bullets">
+        <li>家庭成員：您主動邀請加入的家庭成員可查看共享的寶貝資料與相簿</li>
+        <li>第三方服務：我們使用 Google Firebase（驗證、資料庫、儲存）和 Google Analytics（匿名使用統計）</li>
+        <li>我們不會將您的個人資料出售予第三方</li>
+        <li>除非法律要求，我們不會向任何第三方揭露您的個人資料</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">六、您的權利</div>
+      <ul class="bullets">
+        <li>存取權：您可隨時在應用程式中查看並下載您的資料</li>
+        <li>修改權：您可隨時修改個人資料與寶貝檔案</li>
+        <li>刪除權：您可刪除個別紀錄，或來信要求刪除整個帳戶</li>
+        <li>撤回同意：您可隨時停止使用本應用程式</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">七、兒童隱私</div>
+      <div class="section-body">
+        本應用程式的使用者為成年家長／監護人。我們不會故意向 13 歲以下兒童直接蒐集個人資料。寶貝資料均由家長／監護人代為輸入並管理。
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">八、Cookie 與追蹤技術</div>
+      <div class="section-body">
+        本應用程式不使用 Cookie。我們可能使用 Firebase Analytics 蒐集匿名的使用資料（如功能使用頻率），以改善應用程式體驗。這些資料無法識別個人身份。
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">九、隱私權政策變更</div>
+      <div class="section-body">
+        我們可能不定期更新本政策。重大變更時會透過應用程式內通知告知您。您在變更後繼續使用本應用程式即視為同意更新後的政策。
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">十、聯絡我們</div>
+      <div class="section-body">
+        如對本隱私權政策有任何疑問，請透過以下方式聯絡我們：<br><br>
+        📧 電子郵件：<a href="mailto:service@easy2live.net" style="color:var(--primary)">service@easy2live.net</a><br>
+        📱 在應用程式中：設定 → 意見回饋
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 服務條款 ═══ -->
+  <div id="terms" class="tab-content">
+    <div class="page-header">
+      <div class="icon">📋</div>
+      <h2>服務條款</h2>
+      <div class="date">最後更新日期：2026 年 3 月 15 日</div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">一、服務說明</div>
+      <div class="section-body">
+        Easy2Baby 是一款育兒輔助應用程式，提供寶貝成長記錄、健康追蹤、育兒百科等功能。本服務條款規範您使用 Easy2Baby 應用程式的權利與義務。
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">二、帳戶註冊</div>
+      <ul class="bullets">
+        <li>您須年滿 18 歲或具備完全行為能力方可註冊使用</li>
+        <li>您必須提供真實、準確的個人資訊</li>
+        <li>您有責任維護帳戶安全，妥善保管登入資訊</li>
+        <li>如發現帳戶被未經授權使用，請立即通知我們</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">三、使用規範</div>
+      <div class="section-body" style="margin-bottom:8px">使用本應用程式時，您同意：</div>
+      <ul class="bullets">
+        <li>僅為合法目的使用本服務</li>
+        <li>不上傳違法、侵權或不當的內容</li>
+        <li>不嘗試未經授權存取他人帳戶或資料</li>
+        <li>不使用自動化工具大量存取本服務</li>
+        <li>不進行任何可能損害本服務正常運作的行為</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">四、內容所有權</div>
+      <div class="section-body">
+        您在本應用程式中上傳的照片、文字等內容（「使用者內容」）的智慧財產權歸您所有。您授予我們在提供服務所必要範圍內使用這些內容的有限授權。<br><br>
+        本應用程式的程式碼、設計、商標等智慧財產權歸 Easy2Baby 開發團隊所有。
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">五、健康資訊免責聲明</div>
+      <ul class="bullets">
+        <li>本應用程式提供的育兒資訊（疫苗時程、發展里程碑、副食品指南等）僅供參考</li>
+        <li>這些資訊不構成醫療建議，不能替代專業醫療診斷或治療</li>
+        <li>如有健康相關疑慮，請諮詢合格的醫療專業人員</li>
+        <li>育兒補助資訊以各政府機關最新公告為準</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">六、服務可用性</div>
+      <div class="section-body">
+        我們致力提供穩定的服務，但不保證服務不會中斷。服務可能因系統維護、更新或不可抗力因素而暫時無法使用。我們對因服務中斷而造成的損失不承擔責任。
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">七、費用與訂閱</div>
+      <div class="section-body">
+        本應用程式的基本功能免費提供。進階功能採訂閱制收費，費用詳見應用程式內說明。任何收費變更將提前通知。
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">八、終止服務</div>
+      <ul class="bullets">
+        <li>您可隨時停止使用本應用程式並刪除帳戶</li>
+        <li>如您違反本服務條款，我們保留暫停或終止您帳戶的權利</li>
+        <li>帳戶終止後，您的資料將依照隱私權政策處理</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">九、免責聲明</div>
+      <div class="section-body">
+        本應用程式按「現狀」提供，不提供任何明示或暗示的擔保。在法律允許的最大範圍內，我們對使用本服務所產生的任何直接、間接、偶然或懲罰性損害不承擔責任。
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">十、準據法</div>
+      <div class="section-body">
+        本服務條款之解釋與適用，以中華民國法律為準據法。凡因本服務條款所生之爭議，雙方同意以臺灣臺北地方法院為第一審管轄法院。
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">十一、條款修訂</div>
+      <div class="section-body">
+        我們保留修訂本服務條款的權利。重大修訂將透過應用程式內通知告知您。修訂後您繼續使用本服務即視為同意修訂後的條款。
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title">十二、聯絡方式</div>
+      <div class="section-body">
+        如對本服務條款有任何疑問，請透過以下方式聯絡我們：<br><br>
+        📧 電子郵件：<a href="mailto:service@easy2live.net" style="color:var(--primary)">service@easy2live.net</a><br>
+        📱 在應用程式中：設定 → 意見回饋
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 Easy2Baby · Made by Riga &nbsp;|&nbsp;
+    <a href="#" onclick="switchTabBtn('privacy')">隱私權政策</a> &nbsp;·&nbsp;
+    <a href="#" onclick="switchTabBtn('terms')">服務條款</a>
+  </p>
+</footer>
+
+<script>
+  function switchTab(id, btn) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    if (btn) btn.classList.add('active');
+  }
+  function switchTabBtn(id) {
+    const btns = document.querySelectorAll('.tab-btn');
+    switchTab(id, id === 'privacy' ? btns[0] : btns[1]);
+    return false;
+  }
+</script>
+
+</body>
+</html>
