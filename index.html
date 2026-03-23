@@ -232,8 +232,10 @@
     <div class="section-card">
       <div class="section-title">四、資料儲存與安全</div>
       <div class="section-body">
-        您的資料儲存於 Google Firebase 雲端平台，採用業界標準的加密技術（傳輸中使用 TLS/SSL，靜態資料加密）。我們採取合理的技術與組織措施保護您的個人資料免於未經授權的存取、修改或揭露。<br><br>
-        照片檔案儲存於 Firebase Cloud Storage，受 Google Cloud 安全基礎架構保護。
+        您的資料儲存於以下雲端平台，均採用業界標準的加密技術（傳輸中使用 TLS/SSL，靜態資料加密）：<br><br>
+        • <strong>帳戶與結構性資料</strong>（個人資料、成長紀錄等）儲存於 Google Firebase（Firestore），受 Google Cloud 安全基礎架構保護。<br>
+        • <strong>照片、影片與頭貼</strong>儲存於 Cloudflare R2 物件儲存服務，透過 Cloudflare Worker 進行安全驗證上傳，並以 HTTPS 傳輸保護。<br><br>
+        我們採取合理的技術與組織措施保護您的個人資料免於未經授權的存取、修改或揭露。
       </div>
     </div>
 
